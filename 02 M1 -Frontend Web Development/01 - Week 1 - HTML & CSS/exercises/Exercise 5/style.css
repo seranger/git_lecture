@@ -1,0 +1,45 @@
+/* navbar CSS */
+nav{
+    background: #333;
+    font-family: Arial, sans-serif;
+    position: top;
+    color: white;
+    padding: 15px;
+    justify-content: center;
+}
+
+nav a:hover{
+    columns: #3498db;
+    text-decoration: underline;
+}
+
+nav a{
+    padding: 2px 2px;
+    text-decoration: none;
+    color: white;
+}
+
+/* spacing for navbar options */
+.label-label{
+    display: block;
+}
+
+/* body CSS */
+body{
+    font-family: arial, sans-serif;
+    width: 800px;
+    text-align: center;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    color: #2c3e50;
+    font-size: 25px;
+}
+
+h2{
+    color: #2c3e50;
+    font-size: 20px;
+}

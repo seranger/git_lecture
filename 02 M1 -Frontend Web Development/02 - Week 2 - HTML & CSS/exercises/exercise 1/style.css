@@ -1,0 +1,145 @@
+:root{
+    --primary: #fff;
+    --secondary: #4caf50;
+    --tertiary:silver;
+    --bg:#0e1523; 
+}
+
+
+*{
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.slider{
+    background-color: var(--bg);
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+
+    font: normal 10px "roboto", sans-serif;
+
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: var(--primary);
+    color: var(--primary);
+    border-radius: 8px;
+    border: 10px solid transparent;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 2px 5px (0,0,0,0.1);
+    transition: 0.5s ease-in-out;
+
+}
+
+.card:hover{
+    border: 10px solid var(--tertiary);
+    transform: scale(1.05);
+}
+
+.card::before, .card::after{
+    position: absolute;
+    content: "";
+    background-color: var(--tertiary);
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    z-index: 100;
+}
+
+.card::before{
+    top: -6%;
+    right: -6%;
+    width: 90px;
+    height: 90px;
+}
+
+.card::after{
+    bottom: -6%;
+    left: -6%;
+    width: 50px;
+    height: 50px;
+}
+
+.card:hover::before{
+    transform:scale(1.8)
+}
+
+.card:hover::after{
+    transform:scale(0)
+}
+
+.card-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 200;
+}
+
+.car-img,
+.card-title{
+    transform: translateY(40px);
+    transition: .5s ease-in-out;
+}
+.card-img{
+    width: 200px;
+    height: 300px;
+}
+
+.card-title{
+    font-size: 10px;
+    color: black;
+}
+
+.car-body,
+.card-footer{
+    transform: translateY(80px);
+    transition: .5s ease-in-out;
+}
+
+.card-body{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card:hover .card-img,
+.card:hover .card-title,
+.card:hover .card-body,
+.card:hover .card-footer{
+    transform: translateY(0);
+}
+
+.card-price{
+    font: bolder 15px sans-serif;
+    color: black;
+    position: absolute;
+    word-wrap: break-word;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color:var(--secondary);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.btn-success{
+    background-color: var(--secondary);
+}

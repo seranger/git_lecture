@@ -1,0 +1,147 @@
+/* Hero Section Styling */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url('https://i.pinimg.com/originals/73/19/18/731918f4fb8c8be161e6a2c8751bf009.gif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styling for Hero Content */
+.hero-content {
+  max-width: 60%;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Styling for Right-Side Image */
+.hero-image {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  margin-left: 20px; /* Add space between the text and the image */
+  z-index: 2;
+}
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+/* Navbar Animation */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(123, 16, 16, 0.8);
+  padding: 15px;
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Loading Spinner Animation */
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-top-color: #007bff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Product Card Styling */
+.product-card {
+  overflow: hidden;
+  transform: translateY(20px);
+  animation: slideIn 0.8s forwards;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Product Card Hover Effects */
+.product-card img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Button Pulse Animation */
+.add-to-cart-btn {
+  animation: pulse 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hover Effects for Smooth Color and Opacity Transition */
+.product-card:hover .add-to-cart-btn {
+  background-color: #31322d7f;
+  color: white;
+}
+
+/*Hero Section Heading Effect */
+.hero-section h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+               0 0 10px rgba(255, 255, 255, 0.2),
+               0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-section h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+               0 0 20px rgba(255, 255, 255, 0.4),
+               0 0 30px rgba(255, 255, 255, 0.3);
+}

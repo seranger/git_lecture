@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 4 - Forms</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Internal Css-->
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+      form {
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 24px;
+        max-width: 584px;
+        margin: 0 auto;
+      }
+      input,
+      select {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      /* format class */
+      .label-label {
+        display: block;
+      }
+
+      /*Format Button  */
+      button {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise 4</h1>
+    <!--Forms Start-->
+    <!--Create a feedback form for Exerise 4: First Name, Last Name, Gender, Date of Birth, Email-->
+    <form action="https://formspree.io/f/xpwzpzrd" method="post">
+      <!--First Name-->
+      <label class="label-label">Enter Your First Name:</label>
+      <input type="text" placeholder="John" />
+
+      <!--Last Name-->
+      <label class="label-label">Enter Your Last Name:</label>
+      <input type="text" placeholder="Doe" />
+
+      <!--Gender-->
+      <label class="label-label">Gender</label>
+      <select name="Gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <!--Date of Birth-->
+      <label class="label-label">Date_of_Birth</label>
+      <input type="date" name="date_of_birth" placeholder="eg. 01/01/2000" />
+
+      <!--Email Adress-->
+      <label class="label-label">Enter Your Email Adress:</label>
+      <input type="email" name="Email" placeholder="johndoe@email.com" />
+
+      <!--Submit Button-->
+      <button type="submit">Submit</button>
+    </form>
+    <form action="http://httpbin.org/get" method="get">
+      <!--Search Input-->
+      <label class="label-label">Search</label>
+      <input type="search" name="Search_Name" placeholder="John Doe" />
+
+      <!--Submit Button-->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
